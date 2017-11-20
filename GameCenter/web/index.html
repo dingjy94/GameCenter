@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>GameCenter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/4-col-portfolio.css" rel="stylesheet">
+	
+<script LANGUAGE="JavaScript">
+function signin()
+{
+	var email = document.getElementById("email").value;
+	var password = document.getElementById("password").value;
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET", "http://localhost:8080/GameCenter/Signin?email="+email+"&password="+password,true);
+	xmlhttp.send(null);
+	
+	xmlhttp.onreadystatechange = function()
+	{
+		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+			if(xmlhttp.responseText == 0){
+				alert("password not match");
+			}
+		}
+	}
+}
+</script>
+	
+	
+  </head>
+
+  <body>
+  
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">GameCenter</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"data-toggle="modal" data-target="#modalOnoff">Login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	  
+    </nav>
+	
+	<!-- Page Content -->
+    <div class="container">
+	
+	<div class="modal fade" id="modalOnoff" tabindex="-1" role="dialog" aria-labelledby="lbOnoff">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h4 class="modal-title" id="lbOnoff">Sign In</h4>
+		  </div>
+		  <div class="modal-body">
+			<div class="row">
+			  <div class="col-md-8" >
+				<form>
+				  <div class="form-group"><label>Email</label><input id="email" type="text" class="form-control" required="true" placeholder="Email" value=""></div>
+				  <div class="form-group"><label>Password</label><input id="password" type="password" class="form-control" required="true" placeholder="Password"></div>
+				  <div class="form-group"><button class="btn btn-md btn-success btn-block" type='submit' onclick="signin()">Sign in</button></div>
+				</form>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	  
+	<div class="featurette">
+		<div class="featurette-inner text-center">
+			<form role="form" class="search has-button">
+			<h3 class="no-margin-top h1">Game Recommend</h3>
+				<div class="form-group">
+					<input type="search" placeholder="type interested games" class="form-control form-control-lg">
+					<button class="btn btn-lg btn-warning" type="button">Search</button>
+				</div>
+				<!-- /form-group -->
+			</form>
+			<!-- /.max-width on this form -->
+		</div>
+		<!-- /.featurette-inner (display:table-cell) -->
+	</div>
+		
+		
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Game One</a>
+              </h4>
+			  <p class="card-text">Tags</p>
+			  <p class="card-text">Rating</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Game Two</a>
+              </h4>
+			  <p class="card-text">Tags</p>
+			  <p class="card-text">Rating</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Game Three</a>
+              </h4>
+              <p class="card-text">Tags</p>
+			  <p class="card-text">Rating</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Game Four</a>
+              </h4>
+			  <p class="card-text">Tags</p>
+			  <p class="card-text">Rating</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Game Five</a>
+              </h4>
+			  <p class="card-text">Tags</p>
+			  <p class="card-text">Rating</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Game Six</a>
+              </h4>
+			  <p class="card-text">Tags</p>
+			  <p class="card-text">Rating</p>
+			</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Game Seven</a>
+              </h4>
+			  <p class="card-text">Tags</p>
+			  <p class="card-text">Rating</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Game Eight</a>
+              </h4>
+			  <p class="card-text">Tags</p>
+			  <p class="card-text">Rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+      
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; T17 GameCenter 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

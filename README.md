@@ -1,5 +1,5 @@
 # GameCenter
-##Introduction
+## Introduction
 
 The purpose of this project is mainly focused to help people find the best game that are suitable for themselves. It is hard to find a proper game for most of the users to match their hobbies and abilities when they are exposed to large amounts of games. So we are going to fulfill the game recommendation system to solve this problem in order that helping users spends less time while discovering a suitable and filtering the appropriate game among the games’ store.
 
